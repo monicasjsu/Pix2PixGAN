@@ -78,9 +78,16 @@
                         </div>
                         <div class="card">
                             <div class="card-body">
-                                <h5 class="card-title">Generated Image</h5>
+                                <h5 class="card-title">Pix2Pix Generated Image</h5>
                             </div>
-                            <img src="{{ url_for('static', filename='output.png') }}" alt="Inference Image">
+                            <img src="{{ url_for('static', filename='pix2pix_output.png') }}" alt="Inference Image">
+                            <br><br>
+                        </div>
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Cycle GAN Generated Image</h5>
+                            </div>
+                            <img src="{{ url_for('static', filename='cycle_gan_output.png') }}" alt="Inference Image">
                             <br><br>
                         </div>
                     </div>

@@ -1,7 +1,7 @@
 import os
 
 from dataset import Dataset
-from evaluate import Evaluator
+from webapp.evaluate import Evaluator
 from train import Train
 from utils import Config
 
