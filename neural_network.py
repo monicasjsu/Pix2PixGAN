@@ -37,7 +37,7 @@ class Discriminator:
         model.compile(loss='binary_crossentropy', optimizer=optimizer, loss_weights=[0.5])
         print("\n************************************* Discriminator Model ****************************************")
         print(model.summary())
-        plot_model(model, "modelplots/discriminator_model.png", show_shapes=True, show_layer_names=True)
+        plot_model(model, "modelplots/pix2pix/discriminator_model.png", show_shapes=True, show_layer_names=True)
         return model
 
 
@@ -94,7 +94,7 @@ class Generator:
         model = Model(self.input_image, out_image)
         print("\n**************************************** Generator Model *****************************************")
         print(model.summary())
-        plot_model(model, "modelplots/generator_model.png", show_shapes=True, show_layer_names=True)
+        plot_model(model, "modelplots/pix2pix/generator_model.png", show_shapes=True, show_layer_names=True)
         return model
 
 
@@ -120,5 +120,5 @@ class GAN:
         model.compile(loss=['binary_crossentropy', 'mae'], optimizer=optimizer, loss_weights=[1, 100])
         print("\n******************************************* GAN Model ********************************************")
         print(model.summary())
-        plot_model(model, "modelplots/gan.png", show_shapes=True, show_layer_names=True)
+        plot_model(model, "modelplots/pix2pix/gan.png", show_shapes=True, show_layer_names=True)
         return model
